@@ -14,9 +14,11 @@ $BREW update
 # Install formulas I need
 $BREW install \
         git \
+        gpg \
         k9s \
 	minikube \
         neovim \
+        pinentry-mac \
         python3 \
 
 # Install cask I need
@@ -31,7 +33,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Add useful stuff to .zshrc
 cat <<EOT >> ~/.zshrc 
+#export GPG_TTY=$(tty)
+#export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+#gpgconf --launch gpg-agent
+
 export PATH=/usr/local/opt/python/libexec/bin:$HOME/bin:/usr/local/bin:$PATH
+
 alias python=/opt/homebrew/bin/python3
 alias vi=/opt/homebrew/bin/nvim
 alias k=`which kubectl`
