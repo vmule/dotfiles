@@ -16,10 +16,11 @@ $BREW install \
         git \
         gpg \
         k9s \
-	minikube \
+        minikube \
         neovim \
         pinentry-mac \
         python3 \
+        wget \
 
 # Install cask I need
 $BREW install --cask \
