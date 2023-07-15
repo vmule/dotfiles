@@ -51,4 +51,8 @@ alias vimdiff="$BREW_PREFIX/bin/nvim -d"
 alias k=`which kubectl`
 EOT
 
+git clone https://github.com/NvChad/NvChad.git $HOME/.config/nvim --depth 1
+mkdir* $HOME/.config/nvim/lua/custom
+cp -fr nvim_config/* $HOME/.config/nvim/lua/custom/
+
 source ~/.zshrc
