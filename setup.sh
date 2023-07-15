@@ -5,6 +5,7 @@
 
 BREW=`which brew`
 BREW_PREFIX=`$BREW --prefix`
+
 # Add Homebrew to your PATH:
 (echo; echo 'eval "$($BREW shellenv)"') >> /Users/$USER/.zprofile
 eval "$($BREW shellenv)"
@@ -29,7 +30,7 @@ $BREW install -f \
   wget \
 
 
-# Install cask I need
+# Install casks I need
 $BREW install --cask \
   docker \
   google-chrome \
