@@ -68,7 +68,10 @@ local plugins = {
   },
   {
     "kdheepak/lazygit.nvim",
-     -- optional for floating window border decoration
+    -- optional for floating window border decoration
+    config = function()
+      require "custom.mappings"
+    end,
     dependencies = {
     "nvim-lua/plenary.nvim",
     },
@@ -91,6 +94,10 @@ local plugins = {
     "rcarriga/nvim-notify",
     }
 
-  }
+  },
+  {
+    "tpope/vim-fugitive",
+  },
 }
 return plugins
+
