@@ -41,6 +41,7 @@ M.general = {
   n = {
     ["ww"] = {"^", "vmule: Go to beginning of line"},
     ["ee"] = {"$", "vmule: Go to end line"},
+    ["qq"] = {":w! <CR>", "vmule: Go to end line"},
   }
 }
 
