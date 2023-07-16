@@ -90,4 +90,3 @@ local plugins = {
   }
 }
 return plugins
-
