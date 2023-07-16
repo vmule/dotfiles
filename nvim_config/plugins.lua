@@ -47,9 +47,11 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "bash-language-server",
         "black",
         "debugpy",
         "mypy",
+        "shellcheck",
         "ruff",
         "pyright",
       },

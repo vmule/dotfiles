@@ -3,11 +3,11 @@
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-BREW=`which brew`
-BREW_PREFIX=`$BREW --prefix`
+BREW=$(which brew)
+BREW_PREFIX=$($BREW --prefix)
 
 # Add Homebrew to your PATH:
-(echo; echo 'eval "$($BREW shellenv)"') >> /Users/$USER/.zprofile
+(echo; echo 'eval "$($BREW shellenv)"') >> "/Users/${USER}/.zprofile"
 eval "$($BREW shellenv)"
 
 # Brew
@@ -48,11 +48,11 @@ export PATH=/usr/local/opt/python/libexec/bin:$HOME/bin:/usr/local/bin:$BREW_PRE
 alias python="$BREW_PREFIX/bin/python3"
 alias vi="$BREW_PREFIX/bin/nvim"
 alias vimdiff="$BREW_PREFIX/bin/nvim -d"
-alias k=`which kubectl`
+alias k=$(which kubectl)
 EOT
 
-git clone https://github.com/NvChad/NvChad.git $HOME/.config/nvim --depth 1
-mkdir* $HOME/.config/nvim/lua/custom
-cp -fr nvim_config/* $HOME/.config/nvim/lua/custom/
+git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1
+mkdir "${HOME}/.config/nvim/lua/custom"
+cp -fr nvim_config/* "${HOME}/.config/nvim/lua/custom/"
 
-source ~/.zshrc
+source "${HOME}/.zshrc"

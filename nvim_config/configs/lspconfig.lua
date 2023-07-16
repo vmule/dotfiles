@@ -10,3 +10,9 @@ lspconfig.pyright.setup({
   capabilities = capabilities,
   filetypes = {"python"},
 })
+
+lspconfig.bashls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"sh"},
+})
