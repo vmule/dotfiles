@@ -20,9 +20,9 @@ M.dap_python = {
 
 M.lazygit = {
   plugin = true,
-  {
+  n = {
     -- lazygit
-    ["<leader>gg"] = {"<cmd> LazyGit <CR>", "Call LazyGit"}
+    ["<leader>gg"] = {"<cmd> LazyGit <CR>", "Call LazyGit"},
   }
 }
 
