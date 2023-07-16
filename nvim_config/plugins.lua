@@ -49,6 +49,7 @@ local plugins = {
       ensure_installed = {
         "bash-language-server",
         "black",
+        "clangd",
         "debugpy",
         "dockerfile-language-server",
         "lua-language-server",
