@@ -18,4 +18,30 @@ M.dap_python = {
   }
 }
 
+M.lazygit = {
+  plugin = true,
+  {
+    -- lazygit
+    ["<leader>gg"] = {"<cmd> LazyGit <CR>", "Call LazyGit"}
+  }
+}
+
+M.nvimtree = {
+  plugin = true,
+
+  n = {
+    -- toggle
+    ["<leader>w"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    -- focus
+    ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
+  }
+}
+
+M.general = {
+  n = {
+    ["ww"] = {"^", "vmule: Go to beginning of line"},
+    ["ee"] = {"$", "vmule: Go to end line"},
+  }
+}
+
 return M
