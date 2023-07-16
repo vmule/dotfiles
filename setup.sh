@@ -39,7 +39,7 @@ $BREW install --cask \
 
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Add useful stuff to .zshrc
 cat <<EOT >> ~/.zshrc 
