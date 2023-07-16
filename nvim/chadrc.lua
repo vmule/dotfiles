@@ -27,7 +27,7 @@ opt.list = true
 opt.listchars:append "space:⋅"
 opt.listchars:append "eol:↴"
 
--- opt.swapfile = false
+ opt.swapfile = false
 -- opt.backup = false
 -- opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 -- opt.undofile = true
@@ -43,6 +43,6 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
--- opt.colorcolumn = "80"
+ opt.colorcolumn = "80"
 
 return M

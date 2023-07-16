@@ -52,7 +52,7 @@ alias k=$(which kubectl)
 EOT
 
 git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1
-ln -s "${HOME}/workspace/dotfiles/nvim_config" "${HOME}/.config/nvim/lua/custom"
+ln -s "${HOME}/workspace/dotfiles/nvim" "${HOME}/.config/nvim/lua/custom"
 # mkdir "${HOME}/.config/nvim/lua/custom"
 # cp -fr nvim_config/* "${HOME}/.config/nvim/lua/custom/"
 
