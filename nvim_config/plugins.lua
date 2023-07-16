@@ -93,10 +93,6 @@ local plugins = {
     }
 
   },
-  {
-    "tpope/vim-fugitive",
-    event = "VeryLazy",
-  },
   { "lukas-reineke/indent-blankline.nvim",
     config = function()
       local blankline = require("indent_blankline")
