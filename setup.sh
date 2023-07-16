@@ -25,6 +25,7 @@ $BREW install -f \
   lima \
   minikube \
   neovim \
+  npm \
   pinentry-mac \
   python3 \
   wget \
