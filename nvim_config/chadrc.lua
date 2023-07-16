@@ -3,6 +3,7 @@
  M.ui = {theme = 'catppuccin'}
  M.plugins = "custom.plugins"
  M.mappings = require "custom.mappings"
+ M.highlights = require "custom.highlights"
 
 local opt = vim.opt
 
@@ -25,7 +26,7 @@ opt.wrap = false
 -- opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 --opt.undofile = true
 
-opt.hlsearch = false
+opt.hlsearch = true
 opt.incsearch = true
 
 opt.termguicolors = true
