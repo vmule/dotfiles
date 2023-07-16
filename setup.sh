@@ -6,10 +6,6 @@
 BREW=$(which brew)
 BREW_PREFIX=$($BREW --prefix)
 
-# Add Homebrew to your PATH:
-(echo; echo 'eval "$($BREW shellenv)"') >> "/Users/${USER}/.zprofile"
-eval "$($BREW shellenv)"
-
 # Brew
 $BREW tap homebrew/caskfonts git@github.com:Homebrew/homebrew-cask-fonts.git
 $BREW update
@@ -22,6 +18,7 @@ $BREW install -f \
   jq \
   k9s \
   kube-linter \
+  lazygit \
   lima \
   minikube \
   neovim \
@@ -59,3 +56,5 @@ ln -s "${HOME}/workspace/dotfiles/nvim_config" "${HOME}/.config/nvim/lua/custom"
 # cp -fr nvim_config/* "${HOME}/.config/nvim/lua/custom/"
 
 source "${HOME}/.zshrc"
+
+exit 0

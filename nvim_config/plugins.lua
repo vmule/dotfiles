@@ -69,10 +69,12 @@ local plugins = {
   },
   {
     "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
+    -- opts = {},
+    event = "VeryLazy",
     config = function()
-      require "custom.mappings"
+      require ("core.utils").load_mappings("lazygit")
     end,
+    -- optional for floating window border decoration
     dependencies = {
     "nvim-lua/plenary.nvim",
     },
@@ -93,6 +95,7 @@ local plugins = {
   },
   {
     "tpope/vim-fugitive",
+    event = "VeryLazy",
   },
   { "lukas-reineke/indent-blankline.nvim",
     config = function()
