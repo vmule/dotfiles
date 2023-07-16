@@ -12,7 +12,6 @@ require("noice").setup({
     signature = {
       enabled = false,
     },
-
   },
   -- you can enable a preset for easier configuration
   presets = {

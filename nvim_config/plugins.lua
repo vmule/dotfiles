@@ -51,6 +51,7 @@ local plugins = {
         "black",
         "debugpy",
         "dockerfile-language-server",
+        "lua-language-server",
         "mypy",
         "shellcheck",
         "ruff",
@@ -74,6 +75,9 @@ local plugins = {
   },
   {
     "folke/noice.nvim",
+    config = function()
+      require "custom.configs.noice"
+    end,
     event = "VeryLazy",
     opts = {
     -- add any options here
