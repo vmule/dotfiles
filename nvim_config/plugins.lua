@@ -19,7 +19,7 @@ local plugins = {
   },
   {
     "mfussenegger/nvim-dap",
-    config = function(_, opts)
+    config = function(_, _)
       require("core.utils").load_mappings("dap")
     end
   },
@@ -30,7 +30,7 @@ local plugins = {
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui",
     },
-    config = function(_, opts)
+    config = function(_, _)
       local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
       require("dap-python").setup(path)
       require("core.utils").load_mappings("dap_python")
@@ -50,6 +50,7 @@ local plugins = {
         "bash-language-server",
         "black",
         "debugpy",
+        "dockerfile-language-server",
         "mypy",
         "shellcheck",
         "ruff",
@@ -64,5 +65,29 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  {
+    "kdheepak/lazygit.nvim",
+     -- optional for floating window border decoration
+    dependencies = {
+    "nvim-lua/plenary.nvim",
+    },
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+    -- add any options here
+    },
+    dependencies = {
+    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    "MunifTanjim/nui.nvim",
+    -- OPTIONAL:
+    --   `nvim-notify` is only needed, if you want to use the notification view.
+    --   If not available, we use `mini` as the fallback
+    "rcarriga/nvim-notify",
+    }
+
+  }
 }
 return plugins
+

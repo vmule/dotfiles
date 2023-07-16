@@ -16,3 +16,8 @@ lspconfig.bashls.setup({
   capabilities = capabilities,
   filetypes = {"sh"},
 })
+
+lspconfig.dockerls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
