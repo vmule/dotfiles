@@ -14,6 +14,7 @@ $BREW update
 $BREW install -f \
   font-hack-nerd-font \
   git \
+  git-flow \
   gpg \
   jq \
   k9s \
