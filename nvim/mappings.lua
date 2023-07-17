@@ -31,9 +31,9 @@ M.nvimtree = {
 
   n = {
     -- toggle
-    ["<leader>w"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["<leader>w"] = { "<cmd> NvimTreeToggle <CR>", "vmule: Toggle nvimtree" },
     -- focus
-    ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
+    ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "vmule: Focus nvimtree" },
   }
 }
 
@@ -41,9 +41,13 @@ M.general = {
   n = {
     ["aa"] = {"^", "vmule: Go to beginning of line"},
     ["ee"] = {"$", "vmule: Go to end line"},
-    ["qq"] = {":q <CR>", "vmule: Go to end line"},
-    ["ww"] = {":w! <CR>", "vmule: Go to end line"},
-  }
+    ["qq"] = {":q <CR>", "vmule: Quit "},
+    ["ww"] = {":w! <CR>", "vmule: Write"},
+  },
+  i = {
+    ["<C-a>"] = { "<ESC>^i", "vmule: Go to beginning of line" },
+    ["<C-e>"] = { "<End>", "vmule: Got to end of line" },
+  },
 }
 
 return M
