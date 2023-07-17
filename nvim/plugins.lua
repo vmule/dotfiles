@@ -85,11 +85,19 @@ local plugins = {
       require "custom.configs.noice"
     end,
     event = "VeryLazy",
+    opts = {},
     dependencies = {
     "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
     }
-
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    config = function ()
+      require "custom.configs.nvim-tree"
+    end,
+  event = "VeryLazy",
+  opts = {},
   },
   { "lukas-reineke/indent-blankline.nvim",
     config = function()
