@@ -39,8 +39,10 @@ M.nvimtree = {
 
 M.general = {
   n = {
-    ["aa"] = {"^", "vmule: Go to beginning of line"},
-    ["ee"] = {"$", "vmule: Go to end line"},
+--    ["aa"] = {"^", "vmule: Go to beginning of line"},
+--    ["ee"] = {"$", "vmule: Go to end line"},
+    ["<C-a>"] = { "<ESC>^i", "vmule: Go to beginning of line" },
+    ["<C-e>"] = { "<End>", "vmule: Got to end of line" },
     ["qq"] = {":q <CR>", "vmule: Quit "},
     ["ww"] = {":w! <CR>", "vmule: Write"},
   },
