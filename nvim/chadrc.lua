@@ -1,6 +1,22 @@
 --@type ChadrcConfig 
  local M = {}
- M.ui = {theme = 'catppuccin'}
+ M.ui = {
+  theme = 'catppuccin',
+
+  cmp = {
+    style = "default", -- default/flat_light/flat_dark/atom/atom_colored
+    border_color = "white_fg", -- only applicable for "default" style, use color names from base30 variables
+  },
+
+  telescope = { style = "bordered" }, -- borderless / bordered
+
+  statusline = {
+    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+    -- default/round/block/arrow separators work only for default statusline theme
+    -- round and block will work for minimal theme only
+  },
+}
+
  M.plugins = "custom.plugins"
  M.mappings = require "custom.mappings"
  M.highlights = require "custom.highlights"
@@ -8,6 +24,7 @@
 local opt = vim.opt
 
 opt.guicursor = ""
+opt.mouse = "a"
 
 opt.nu = true
 opt.relativenumber = true
