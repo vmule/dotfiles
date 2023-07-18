@@ -27,3 +27,8 @@ lspconfig.clangd.setup({
   capabilities = capabilities,
 })
 
+lspconfig.yamlls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+

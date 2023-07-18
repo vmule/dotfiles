@@ -57,6 +57,7 @@ local plugins = {
         "shellcheck",
         "ruff",
         "pyright",
+        "yaml-language-server",
       },
     },
   },
