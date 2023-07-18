@@ -1,17 +1,13 @@
 --@type ChadrcConfig 
  local M = {}
+
  M.ui = {
   theme = 'catppuccin',
-
-  cmp = {
-    style = "default", -- default/flat_light/flat_dark/atom/atom_colored
-    border_color = "white_fg", -- only applicable for "default" style, use color names from base30 variables
-  },
 
   telescope = { style = "bordered" }, -- borderless / bordered
 
   statusline = {
-    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+    theme = "default", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
   },
@@ -21,40 +17,37 @@
  M.mappings = require "custom.mappings"
  M.highlights = require "custom.highlights"
 
-local opt = vim.opt
+vim.opt.guicursor = ""
+vim.opt.mouse = "a"
+vim.opt.nu = true
 
-opt.guicursor = ""
-opt.mouse = "a"
+vim.opt.relativenumber = true
 
-opt.nu = true
-opt.relativenumber = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.wrap = false
 
-opt.smartindent = true
-opt.wrap = false
+vim.opt.clipboard = "unnamed"
 
-opt.clipboard = "unnamed"
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
 
-opt.list = true
-opt.listchars:append "space:⋅"
-opt.listchars:append "eol:↴"
+vim. opt.swapfile = false
 
- opt.swapfile = false
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 
-opt.hlsearch = true
-opt.incsearch = true
+vim.opt.termguicolors = true
 
-opt.termguicolors = true
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
 
-opt.scrolloff = 8
-opt.signcolumn = "yes"
+vim.opt.updatetime = 50
 
-opt.updatetime = 50
-
- opt.colorcolumn = "80"
-
+vim.opt.colorcolumn = "80"
 return M
