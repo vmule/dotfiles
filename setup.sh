@@ -22,6 +22,7 @@ $BREW install -f \
   lazygit \
   lima \
   minikube \
+  neofetch \
   neovim \
   npm \
   pinentry-mac \
