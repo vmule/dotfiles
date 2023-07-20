@@ -40,9 +40,16 @@ $BREW install --cask \
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+ln -s "${HOME}/workspace/dotfiles/iterm/zshrc" "${HOME}/.zshrc"
+
+# Install p10k
 git clone https://github.com/romkatv/powerlevel10k.git "${HOME}/.oh-my-zsh/custom}/themes/powerlevel10k" --depth 1
 ln -s "${HOME}/workspace/dotfiles/iterm/p10k.zsh" "${HOME}/.p10k.zsh"
 
+# Install neovim
+git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1
+ln -s "${HOME}/workspace/dotfiles/nvim" "${HOME}/.config/nvim/lua/custom"
+#
 # Add useful stuff to .zshrc
 cat <<EOT >> ~/.zshrc 
 
@@ -52,11 +59,8 @@ alias python="${BREW_PREFIX}/bin/python3"
 alias vi="${BREW_PREFIX}/bin/nvim"
 alias vimdiff="${BREW_PREFIX}/bin/nvim -d"
 alias k="${BREW_PREFIX}/bin/kubectl"
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-EOT
+${BREW_PREFIX}/bin/neofetch
 
-git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1
-ln -s "${HOME}/workspace/dotfiles/nvim" "${HOME}/.config/nvim/lua/custom"
-# source "${HOME}/.zshrc"
+EOT
 
 exit 0

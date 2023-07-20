@@ -20,10 +20,9 @@
  M.highlights = require "custom.highlights"
 
 vim.opt.guicursor = ""
-vim.opt.mouse = "a"
-vim.opt.nu = true
-vim.opt.paste = true
+vim.opt.mouse = ""
 
+vim.opt.nu = true
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 2
