@@ -27,7 +27,6 @@ zstyle ':omz:update' frequency 1
 plugins=(
 git
 autoupdate
-zsh-syntax-highlighting
 sudo
 dirhistory
 history
@@ -37,6 +36,10 @@ kubectl
 source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Configure zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+
 ## Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -45,4 +48,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# #
+
+export PATH=/usr/local/opt/python/libexec/bin:/Users/vmule/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/munki
+
+alias python="/usr/local/bin/python3"
+alias vi="/usr/local/bin/nvim"
+alias vimdiff="/usr/local/bin/nvim -d"
+alias k="/usr/local/bin/kubectl"
+/usr/local/bin/neofetch
+

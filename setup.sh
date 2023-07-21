@@ -29,6 +29,7 @@ $BREW install -f \
   python3 \
   rg \
   wget \
+  zsh-syntax-highlighting \
 
 
 # Install casks I need
@@ -42,11 +43,14 @@ $BREW install --cask \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 ln -s "${HOME}/workspace/dotfiles/iterm/zshrc" "${HOME}/.zshrc"
 
-# Install p10k
-git clone https://github.com/romkatv/powerlevel10k.git "${HOME}/.oh-my-zsh/custom}/themes/powerlevel10k" --depth 1
+# Install zsh plugins
+git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins "${ZSH_CUSTOM}/plugins/autoupdate" --depth 1
+
+# Install and configure p10k
+git clone https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}/themes/powerlevel10k" --depth 1
 ln -s "${HOME}/workspace/dotfiles/iterm/p10k.zsh" "${HOME}/.p10k.zsh"
 
-# Install neovim
+# Configure neovim
 git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1
 ln -s "${HOME}/workspace/dotfiles/nvim" "${HOME}/.config/nvim/lua/custom"
 #
