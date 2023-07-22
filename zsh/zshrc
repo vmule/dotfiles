@@ -55,5 +55,6 @@ alias python="/usr/local/bin/python3"
 alias vi="/usr/local/bin/nvim"
 alias vimdiff="/usr/local/bin/nvim -d"
 alias k="/usr/local/bin/kubectl"
-/usr/local/bin/neofetch
+
+#/usr/local/bin/neofetch
 
