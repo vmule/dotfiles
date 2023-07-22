@@ -6,21 +6,15 @@ local M = {}
 
 ---@type Base46HLGroupsList
 M.override = {
-  Comment = {
-    italic = true,
-  },
-  NormalFloat = {
-    fg = "dark_purple",
-  },
- NvimTreeNormal = {
-    fg = "dark_purple",
-  },
+  -- NormalFloat = { fg = "dark_purple", },
+  -- NvimTreeNormal = { fg = "dark_purple", },
+  -- TelescopePromptNormal = { link = "Normal", },
+  -- TelescopeNormal = { link = "Normal", },
 }
 
 
 ---@type HLTable
 M.add = {
-  NvimTreeOpenedFolderName = { fg = "green", bold = true },
 }
 
 return M

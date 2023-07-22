@@ -1,28 +1,31 @@
 --@type ChadrcConfig 
  local M = {}
 
+M.highlights = require "custom.highlights"
+M.mappings = require "custom.mappings"
+M.plugins = "custom.plugins"
+
  M.ui = {
   theme = 'catppuccin',
-  transparency = true,
+  transparency = false,
 
   telescope = {
-    style = "bordered"
+    style = "bordered",
     -- borderless / bordered
   },
 
   statusline = {
-    theme = "default",
+    theme = "vscode_colored",
     -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
   },
 }
 
-M.plugins = "custom.plugins"
-M.mappings = require "custom.mappings"
-M.highlights = require "custom.highlights"
-
 vim.api.nvim_set_hl(0, "Comment", { fg = "#f0efe9", italic = true, })
+vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { fg = "#abe9b3", bold = true, })
+vim.api.nvim_set_hl(0, "St_gitIcons", { fg = "#abe9b3", })
+vim.api.nvim_set_hl(0, "StText", { fg = "white", italic = true})
 
 vim.opt.guicursor = ""
 vim.opt.mouse = ""
@@ -40,8 +43,8 @@ vim.opt.copyindent = true
 vim.opt.clipboard = "unnamed"
 
 vim.opt.list = true
-vim.opt.listchars:append "space:⋅"
-vim.opt.listchars:append "eol:↴"
+-- vim.opt.listchars:append "space:⋅"
+-- vim.opt.listchars:append "eol:↴"
 vim.opt.wrap = true
 
 vim. opt.swapfile = false

@@ -117,12 +117,12 @@ local plugins = {
       })
     end,
   },
-  -- { "xiyaowong/transparent.nvim",
-  --   config = function()
-  --     require "custom.configs.transparent"
-  --   end,
-  --   opts = {},
-  --   lazy = false,
-  -- },
+  { "xiyaowong/transparent.nvim",
+    config = function()
+      require "custom.configs.transparent"
+    end,
+    opts = {},
+    lazy = false,
+  },
 }
 return plugins

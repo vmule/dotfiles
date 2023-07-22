@@ -31,7 +31,10 @@ $BREW install -f \
   pinentry-mac \
   python3 \
   rg \
+  rust \
+  rustup \
   wget \
+  zsh-syntax-highlighting \
 
 # Install casks I need
 $BREW install --cask \
@@ -74,6 +77,10 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 cat <<EOT >> "${ZSH_CUSTOM}/alias.zsh"
 
 export PATH=/usr/local/opt/python/libexec/bin:${HOME}/bin:/usr/local/bin:${BREW_PREFIX}/bin:${PATH}
+
+# Configure zsh-syntax-highlighting.zsh
+source "${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="${BREW_PREFIX}/share/zsh-syntax-highlighting/highlighters"
 
 alias python="${BREW_PREFIX}/bin/python3"
 alias vi="${BREW_PREFIX}/bin/nvim"
