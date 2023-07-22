@@ -10,6 +10,6 @@ require("transparent").setup({
   extra_groups = {}, -- table: additional groups that should be cleared
 -- table: groups you don't want to clear
   exclude_groups = {
-    'String',
+    'StatusLine',
   }, -- table: groups you don't want to clear
 })

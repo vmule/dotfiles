@@ -62,8 +62,11 @@ git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1
 ln -s "${HOME}/workspace/dotfiles/nvim" "${HOME}/.config/nvim/lua/custom"
 
 # Configure iTerm
+ITERM_CONFIG_DIR="${HOME}/.iterm2"
+mkdir ${ITERM_CONFIG_DIR}
+cp "${HOME}/workspace/dotfiles/iterm/com.googlecode.iterm2.plist" ${ITERM_CONFIG_DIR}
 # # Specify the preferences directory
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${HOME}/workspace/dotfiles/iterm"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${HOME}/.iterm2"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 #
