@@ -110,15 +110,19 @@ local plugins = {
     }
     end,
   },
-  { "xiyaowong/transparent.nvim",
-    opts = {},
-    lazy = false,
+  { "rcarriga/nvim-notify",
     config = function()
-      require "custom.configs.transparent"
       require('notify').setup ({
         background_colour = "#000000"
       })
-    end
+    end,
   },
+  -- { "xiyaowong/transparent.nvim",
+  --   config = function()
+  --     require "custom.configs.transparent"
+  --   end,
+  --   opts = {},
+  --   lazy = false,
+  -- },
 }
 return plugins

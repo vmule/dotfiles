@@ -9,7 +9,14 @@ M.override = {
   Comment = {
     italic = true,
   },
+  NormalFloat = {
+    fg = "dark_purple",
+  },
+ NvimTreeNormal = {
+    fg = "dark_purple",
+  },
 }
+
 
 ---@type HLTable
 M.add = {

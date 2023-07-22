@@ -3,21 +3,26 @@
 
  M.ui = {
   theme = 'catppuccin',
+  transparency = true,
 
   telescope = {
     style = "bordered"
-  }, -- borderless / bordered
+    -- borderless / bordered
+  },
 
   statusline = {
-    theme = "minimal", -- default/vscode/vscode_colored/minimal
+    theme = "default",
+    -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
   },
 }
 
- M.plugins = "custom.plugins"
- M.mappings = require "custom.mappings"
- M.highlights = require "custom.highlights"
+M.plugins = "custom.plugins"
+M.mappings = require "custom.mappings"
+M.highlights = require "custom.highlights"
+
+vim.api.nvim_set_hl(0, "Comment", { fg = "#f0efe9", italic = true, })
 
 vim.opt.guicursor = ""
 vim.opt.mouse = ""
