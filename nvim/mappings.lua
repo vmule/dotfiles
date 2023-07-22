@@ -43,6 +43,7 @@ M.general = {
     ["<C-e>"] = { "<End>", "vmule: Got to end of line" },
     ["qq"] = {":q <CR>", "vmule: Quit "},
     ["ww"] = {":w! <CR>", "vmule: Write"},
+    ["<leader>tt"] = {"<cmd>TransparentToggle<CR>", "Toggle Transparent"},
   },
   i = {
     ["<C-a>"] = { "<ESC>^i", "vmule: Go to beginning of line" },

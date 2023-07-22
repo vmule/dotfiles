@@ -110,5 +110,9 @@ local plugins = {
     }
     end,
   },
+  { "xiyaowong/transparent.nvim",
+    opts = {},
+    lazy = false
+  },
 }
 return plugins
