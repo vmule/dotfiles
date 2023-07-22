@@ -114,8 +114,9 @@ local plugins = {
     opts = {},
     lazy = false,
     config = function()
+      require "custom.configs.transparent"
       require('notify').setup ({
-      background_colour = "#000000"
+        background_colour = "#000000"
       })
     end
   },
