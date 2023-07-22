@@ -48,13 +48,3 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/h
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export PATH=/usr/local/opt/python/libexec/bin:/Users/vmule/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/munki
-
-alias python="/usr/local/bin/python3"
-alias vi="/usr/local/bin/nvim"
-alias vimdiff="/usr/local/bin/nvim -d"
-alias k="/usr/local/bin/kubectl"
-
-#/usr/local/bin/neofetch
-

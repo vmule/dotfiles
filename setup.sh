@@ -5,10 +5,12 @@
 
 BREW=$(which brew)
 BREW_PREFIX=$($BREW --prefix)
+ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
 
 # Brew
 $BREW tap homebrew/caskfonts git@github.com:Homebrew/homebrew-cask-fonts.git
 $BREW update
+
 
 # Install formulas I need
 $BREW install -f \
@@ -22,7 +24,6 @@ $BREW install -f \
   lazygit \
   lima \
   minikube \
-  neofetch \
   neovim \
   npm \
   pinentry-mac \
@@ -30,7 +31,6 @@ $BREW install -f \
   rg \
   wget \
   zsh-syntax-highlighting \
-
 
 # Install casks I need
 $BREW install --cask \
@@ -42,6 +42,13 @@ $BREW install --cask \
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 ln -s "${HOME}/workspace/dotfiles/zsh/zshrc" "${HOME}/.zshrc"
+
+if [ -z ${ZSH_CUSTOM+x} ]
+then
+  ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
+else
+  echo "ZSH_CUSTOM is set to '$ZSH_CUSTOM'"
+fi
 
 # Install zsh plugins
 git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins "${ZSH_CUSTOM}/plugins/autoupdate" --depth 1
@@ -61,7 +68,7 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${HOME}/workspac
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 #
 # Add useful stuff to .zshrc
-cat <<EOT >> ~/.zshrc 
+cat <<EOT >> "${ZSH_CUSTOM}/alias.zsh"
 
 export PATH=/usr/local/opt/python/libexec/bin:${HOME}/bin:/usr/local/bin:${BREW_PREFIX}/bin:${PATH}
 
@@ -69,8 +76,6 @@ alias python="${BREW_PREFIX}/bin/python3"
 alias vi="${BREW_PREFIX}/bin/nvim"
 alias vimdiff="${BREW_PREFIX}/bin/nvim -d"
 alias k="${BREW_PREFIX}/bin/kubectl"
-${BREW_PREFIX}/bin/neofetch
-
 EOT
 
 exit 0

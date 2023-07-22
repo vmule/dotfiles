@@ -112,7 +112,12 @@ local plugins = {
   },
   { "xiyaowong/transparent.nvim",
     opts = {},
-    lazy = false
+    lazy = false,
+    config = function()
+      require('notify').setup ({
+      background_colour = "#000000"
+      })
+    end
   },
 }
 return plugins
