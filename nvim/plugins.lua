@@ -19,7 +19,7 @@ local plugins = {
   },
   {
     "mfussenegger/nvim-dap",
-    config = function(_, _)
+    config = function()
       require("core.utils").load_mappings("dap")
     end
   },
@@ -37,6 +37,15 @@ local plugins = {
     end,
   },
   {
+    "dreamsofcode-io/nvim-dap-go",
+    ft = "go",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function(_, opts)
+      require("dap-go").setup(opts)
+      require("core.utils").load_mappings("dap_go")
+    end
+  },
+  {
     "jose-elias-alvarez/null-ls.nvim",
     ft = {"python"},
     opts = function()
@@ -47,18 +56,18 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "vim",
-        "lua",
-        "yaml",
-        "json",
         "c",
-        "python",
-        "rust",
-        "go",
-        "regex",
         "bash",
+        "go",
+        "json",
+        "lua",
         "markdown",
         "markdown_inline",
+        "python",
+        "regex",
+        "rust",
+        "vim",
+        "yaml",
       },
     },
   },
@@ -71,12 +80,14 @@ local plugins = {
         "clangd",
         "debugpy",
         "dockerfile-language-server",
+        "golangci-lint",
+        "gospel",
         "lua-language-server",
         "mypy",
-        "shellcheck",
+        "pyright",
         "ruff",
         "rust-analyzer",
-        "pyright",
+        "shellcheck",
         "yaml-language-server",
       },
     },
@@ -152,6 +163,17 @@ local plugins = {
     init = function ()
       vim.g.rustfmt_autosave = 1
     end
+  },
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function(_, opts)
+      require("gopher").setup(opts)
+      require("core.utils").load_mappings("gopher")
+    end,
+    build = function()
+      vim.cmd [[silent! GoInstallDeps]]
+    end,
   },
 }
 return plugins

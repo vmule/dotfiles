@@ -10,6 +10,7 @@ ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
 
 # Brew
 $BREW tap homebrew/caskfonts git@github.com:Homebrew/homebrew-cask-fonts.git
+$BREW tap incu6us/homebrew-tap
 $BREW update
 
 
@@ -19,6 +20,9 @@ $BREW install -f \
   git \
   git-flow \
   golang \
+  goimports-reviser \
+  golines \
+  gofumt \
   gpg \
   jq \
   k9s \
@@ -32,6 +36,7 @@ $BREW install -f \
   python3 \
   rg \
   rust \
+  rustfmt \
   rustup \
   wget \
   zsh-syntax-highlighting \
