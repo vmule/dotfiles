@@ -19,10 +19,11 @@ $BREW install -f \
   font-hack-nerd-font \
   git \
   git-flow \
+  go \
   golang \
   goimports-reviser \
   golines \
-  gofumt \
+  gofumpt \
   gpg \
   jq \
   k9s \
@@ -50,6 +51,7 @@ $BREW install --cask \
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+mv "${HOME}/.zshrc" "${HOME}/.zshrc.bak"
 ln -s "${HOME}/workspace/dotfiles/zsh/zshrc" "${HOME}/.zshrc"
 
 if [ -z ${ZSH_CUSTOM+x} ]
@@ -64,7 +66,8 @@ git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins "${ZSH_CUSTOM}
 
 # Install and configure p10k
 git clone https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}/themes/powerlevel10k" --depth 1
-ln -s "${HOME}/workspace/dotfiles/zsh/p10k.zsh" "${HOME}/.p10k.zsh"
+mv "${HOME}/.p10k.zsh" "${HOME}/.p10k.zsh.bak"
+ln -s "${HOME}/workspace/dotfiles/p10k/p10k.zsh" "${HOME}/.p10k.zsh"
 
 # Configure neovim
 git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1
