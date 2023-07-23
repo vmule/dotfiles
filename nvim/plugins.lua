@@ -44,6 +44,25 @@ local plugins = {
     end,
   },
   {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "yaml",
+        "json",
+        "c",
+        "python",
+        "rust",
+        "go",
+        "regex",
+        "bash",
+        "markdown",
+        "markdown_inline",
+      },
+    },
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -56,6 +75,7 @@ local plugins = {
         "mypy",
         "shellcheck",
         "ruff",
+        "rust-analyzer",
         "pyright",
         "yaml-language-server",
       },
@@ -88,8 +108,7 @@ local plugins = {
     event = "VeryLazy",
     opts = {},
     dependencies = {
-    "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
+      "MunifTanjim/nui.nvim",
     }
   },
   {
@@ -100,29 +119,39 @@ local plugins = {
   event = "VeryLazy",
   opts = {},
   },
-  { "lukas-reineke/indent-blankline.nvim",
+  {
+    "lukas-reineke/indent-blankline.nvim",
     config = function()
       local blankline = require("indent_blankline")
       blankline.setup {
       space_char_blankline = " ",
       show_current_context = true,
       show_current_context_start = true,
-    }
+      }
     end,
   },
-  { "rcarriga/nvim-notify",
+  {
+    "rcarriga/nvim-notify",
     config = function()
       require('notify').setup ({
         background_colour = "#000000"
       })
     end,
   },
-  { "xiyaowong/transparent.nvim",
+  {
+    "xiyaowong/transparent.nvim",
     config = function()
       require "custom.configs.transparent"
     end,
     opts = {},
     lazy = false,
+  },
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function ()
+      vim.g.rustfmt_autosave = 1
+    end
   },
 }
 return plugins
