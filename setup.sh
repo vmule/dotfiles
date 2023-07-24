@@ -6,48 +6,14 @@
 BREW=$(which brew)
 BREW_PREFIX=$($BREW --prefix)
 ITERM_CONFIG_DIR="${HOME}/.iterm2"
+K9S_CONFIG_PATH="${HOME}/Library/Application Support/k9s"
 ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
 
 # Brew
-$BREW tap homebrew/caskfonts git@github.com:Homebrew/homebrew-cask-fonts.git
-$BREW tap incu6us/homebrew-tap
 $BREW update
 
-
-# Install formulas I need
-$BREW install -f \
-  font-hack-nerd-font \
-  git \
-  git-flow \
-  go \
-  golang \
-  goimports-reviser \
-  golines \
-  gofumpt \
-  gpg \
-  jq \
-  k9s \
-  kube-linter \
-  lazygit \
-  lima \
-  minikube \
-  neovim \
-  npm \
-  pinentry-mac \
-  python3 \
-  rg \
-  rust \
-  rustfmt \
-  rustup \
-  wget \
-  zsh-syntax-highlighting \
-
-# Install casks I need
-$BREW install --cask \
-  docker \
-  google-chrome \
-  iterm2 \
-
+# Install what I need
+$BREW bundle --file homebrew/brewfile
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -68,6 +34,10 @@ git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins "${ZSH_CUSTOM}
 git clone https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}/themes/powerlevel10k" --depth 1
 mv "${HOME}/.p10k.zsh" "${HOME}/.p10k.zsh.bak"
 ln -s "${HOME}/workspace/dotfiles/p10k/p10k.zsh" "${HOME}/.p10k.zsh"
+
+# Install k9s catpuccin theme
+git clone https://github.com/catppuccin/k9s.git "${K9S_CONFIG_PATH}/skins/catpuccin" --depth 1
+cp "${K9S_CONFIG_PATH}/skins/catpuccin/dist/mocha.yml" "${K9S_CONFIG_PATH}/skin.yml"
 
 # Configure neovim
 git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1

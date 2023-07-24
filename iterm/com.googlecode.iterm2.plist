@@ -2012,7 +2012,7 @@
 			<key>Background Image Is Tiled</key>
 			<false/>
 			<key>Background Image Mode</key>
-			<integer>2</integer>
+			<integer>3</integer>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -2061,7 +2061,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>19.705005402260639</real>
+			<real>15</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -2846,6 +2846,8 @@
 					<string>\btelnet:([a-z0-9A-Z_]+@)?([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\b</string>
 				</dict>
 			</array>
+			<key>Space</key>
+			<integer>0</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
