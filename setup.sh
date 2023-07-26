@@ -51,7 +51,7 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${ITERM_CONFIG_D
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
-# Add useful stuff to alias.zshr
+# Add useful stuff to alias.zsh
 cat <<EOT >> "${ZSH_CUSTOM}/alias.zsh"
 
 export PATH=/usr/local/opt/python/libexec/bin:${HOME}/bin:/usr/local/bin:${BREW_PREFIX}/bin:${PATH}
