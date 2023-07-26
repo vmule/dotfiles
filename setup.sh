@@ -3,7 +3,13 @@
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-BREW=$(which brew)
+if [[ $(uname -m) == 'arm64' ]]; then
+
+  BREW="/opt/homebrew/bin/brew"
+else
+  BREW="/usr/local/bin/brew"
+fi
+
 BREW_PREFIX=$($BREW --prefix)
 ITERM_CONFIG_DIR="${HOME}/.iterm2"
 K9S_CONFIG_PATH="${HOME}/Library/Application Support/k9s"

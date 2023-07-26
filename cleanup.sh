@@ -18,7 +18,6 @@ rm "${ZSH_CUSTOM}/plugins/"
 rm -f "${HOME}/.p10k.zsh.bak"
 rm -f "${HOME}/.p10k.zsh"
 
-
 # Delete k9s catpuccin theme
 rm -fr "${K9S_CONFIG_PATH}/skins"
 rm -f "${K9S_CONFIG_PATH}/skin.yml"
@@ -27,17 +26,22 @@ rm -f "${K9S_CONFIG_PATH}/skin.yml"
 rm -fr "${HOME}/.config/nvim"
 
 # Clean up iTerm
-mkdir "${ITERM_CONFIG_DIR}"
 rm -fr "${ITERM_CONFIG_DIR}"
-defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool false
+#rm -fr "${HOME}/Library/Application Support/iTerm2"
+#rm -fr "${HOME}/Library/Saved Application State/com.googlecode.iterm2.savedState"
+#rm -fr /Applications/iTerm.app
 
 # Delete  alias.zsh
 rm "${ZSH_CUSTOM}/alias.zsh"
 
 # Uninstall Brew formulas and casks
-$BREW uninstall --force $("${BREW}" list)
+$BREW uninstall --force --zap $("${BREW}" list)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
 
 # Uninstall oh-my-zsh
 command env ZSH="$ZSH" sh "$ZSH/tools/uninstall.sh"
+
+# Restore bash as login shell
+/usr/bin/chsh -s /bin/bash
 
 exit 0
