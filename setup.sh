@@ -50,7 +50,7 @@ cp "${HOME}/workspace/dotfiles/iterm/com.googlecode.iterm2.plist" "${ITERM_CONFI
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${ITERM_CONFIG_DIR}"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-#
+
 # Add useful stuff to alias.zshr
 cat <<EOT >> "${ZSH_CUSTOM}/alias.zsh"
 
