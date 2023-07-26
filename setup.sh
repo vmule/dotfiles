@@ -4,7 +4,6 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 if [[ $(uname -m) == 'arm64' ]]; then
-
   BREW="/opt/homebrew/bin/brew"
 else
   BREW="/usr/local/bin/brew"
@@ -71,5 +70,7 @@ alias vi="${BREW_PREFIX}/bin/nvim"
 alias vimdiff="${BREW_PREFIX}/bin/nvim -d"
 alias k="${BREW_PREFIX}/bin/kubectl"
 EOT
+
+/usr/bin/chsh -s /bin/zsh
 
 exit 0
