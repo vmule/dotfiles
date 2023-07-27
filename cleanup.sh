@@ -36,13 +36,10 @@ rm -fr "${HOME}/.config/nvim"
 
 # Clean up iTerm
 rm -fr "${ITERM_CONFIG_DIR}"
-#rm -fr "${HOME}/Library/Application Support/iTerm2"
-#rm -fr "${HOME}/Library/Saved Application State/com.googlecode.iterm2.savedState"
-#rm -fr /Applications/iTerm.app
 
 # Uninstall Brew formulas and casks
 $BREW uninstall --force --zap $($BREW list)
-#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
 
 # Restore bash as login shell
 /usr/bin/chsh -s /bin/bash
