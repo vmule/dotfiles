@@ -18,7 +18,7 @@ local opts = {
     null_ls.builtins.formatting.golines,
 
     -- rust formatter
-    null_ls.builtins.formatting.rust.vim,
+    -- null_ls.builtins.formatting.rust.vim,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
