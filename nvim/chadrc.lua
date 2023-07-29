@@ -22,6 +22,8 @@ M.plugins = "custom.plugins"
   },
 }
 
+vim.g.mapleader = ' '
+
 vim.api.nvim_set_hl(0, "Comment", { fg = "#f0efe9", italic = true, })
 vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { fg = "#abe9b3", bold = true, })
 vim.api.nvim_set_hl(0, "St_gitIcons", { fg = "#abe9b3", })

@@ -1,4 +1,8 @@
 local plugins = {
+
+  {
+    "folke/lazy.nvim", version = false,
+  },
   {
     "rcarriga/nvim-dap-ui",
     dependencies = "mfussenegger/nvim-dap",
