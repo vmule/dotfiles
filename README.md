@@ -2,14 +2,6 @@
 
 Collection of scripts and dotfiles to setup my env
 
-
-# Nvim setup
-
-<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/plugins" /></a>
-<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/leaderkey" /></a>
-<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/plugin-manager" /></a>
-
-
 ## Install Instructions
 
 Clone the repository and install the plugins:
@@ -23,6 +15,13 @@ Run setup.sh:
 ```sh
 bash ~/workspace/setup.sh
 ```
+
+# Nvim setup
+
+<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/plugins" /></a>
+<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/leaderkey" /></a>
+<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/plugin-manager" /></a>
+
 
 ## Plugins
 
