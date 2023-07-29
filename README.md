@@ -7,13 +7,14 @@ Collection of scripts and dotfiles to setup my env
 Clone the repository and install the plugins:
 
 ```sh
-git clone git@github.com:vmule/dotfiles ~/workspace/
+mkdir ~/workspace && cd ~/workspace
+git clone git@github.com:vmule/dotfiles
 ```
 
 Run setup.sh:
 
 ```sh
-bash ~/workspace/setup.sh
+bash ./setup.sh
 ```
 
 # Nvim setup
