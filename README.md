@@ -5,9 +5,9 @@ Collection of scripts and dotfiles to setup my env
 
 # Nvim setup
 
-<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/plugins?style=flat" /></a>
-<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/leaderkey?style=flat" /></a>
-<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/plugin-manager?style=flat" /></a>
+<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/plugins" /></a>
+<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/leaderkey" /></a>
+<a href="https://dotfyle.com/vmule/dotfiles"><img src="https://dotfyle.com/vmule/dotfiles/badges/plugin-manager" /></a>
 
 
 ## Install Instructions
