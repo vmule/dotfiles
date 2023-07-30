@@ -47,6 +47,10 @@ vim.opt.clipboard = "unnamed"
 vim.opt.list = true
 -- vim.opt.listchars:append "space:⋅"
 -- vim.opt.listchars:append "eol:↴"
+-- vim.opt.listchars:append "trail:-"
+-- vim.opt.listchars:append "nbsp:+"
+-- vim.opt.listchars:append "eol:$"
+
 vim.opt.wrap = true
 
 vim. opt.swapfile = false

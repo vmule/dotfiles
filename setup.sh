@@ -13,6 +13,7 @@ BREW_PREFIX=$($BREW --prefix)
 ITERM_CONFIG_DIR="${HOME}/.iterm2"
 K9S_CONFIG_PATH="${HOME}/Library/Application Support/k9s"
 ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
+DOTFILES="${HOME}/workspace/dotfiles"
 
 # Brew
 $BREW update
@@ -23,7 +24,7 @@ $BREW bundle --file ./brewfile
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mv "${HOME}/.zshrc" "${HOME}/.zshrc.bak"
-ln -s "${HOME}/workspace/dotfiles/zsh/zshrc" "${HOME}/.zshrc"
+ln -s "${DOTFILES}/zsh/zshrc" "${HOME}/.zshrc"
 
 if [ -z ${ZSH_CUSTOM+x} ]
 then
@@ -38,7 +39,7 @@ git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins "${ZSH_CUSTOM}
 # Install and configure p10k
 git clone https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}/themes/powerlevel10k" --depth 1
 mv "${HOME}/.p10k.zsh" "${HOME}/.p10k.zsh.bak"
-ln -s "${HOME}/workspace/dotfiles/p10k/p10k.zsh" "${HOME}/.p10k.zsh"
+ln -s "${DOTFILES}/p10k/p10k.zsh" "${HOME}/.p10k.zsh"
 
 # Install k9s catpuccin theme
 git clone https://github.com/catppuccin/k9s.git "${K9S_CONFIG_PATH}/skins/catpuccin" --depth 1
@@ -46,15 +47,18 @@ cp "${K9S_CONFIG_PATH}/skins/catpuccin/dist/mocha.yml" "${K9S_CONFIG_PATH}/skin.
 
 # Configure neovim
 git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1
-ln -s "${HOME}/workspace/dotfiles/nvim" "${HOME}/.config/nvim/lua/custom"
+ln -s "${DOTFILES}/nvim" "${HOME}/.config/nvim/lua/custom"
 
 # Configure iTerm
 mkdir "${ITERM_CONFIG_DIR}"
-cp "${HOME}/workspace/dotfiles/iterm/com.googlecode.iterm2.plist" "${ITERM_CONFIG_DIR}"
+cp "${DOTFILES}/iterm/com.googlecode.iterm2.plist" "${ITERM_CONFIG_DIR}"
 # # Specify the preferences directory
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${ITERM_CONFIG_DIR}"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+# Configure Karabiner
+cp "${HOME}/.config/karabiner/karabiner.json" "${DOTFILES}/karabiner/karabiner.json"
 
 # Add useful stuff to alias.zsh
 cat <<EOT >> "${ZSH_CUSTOM}/alias.zsh"

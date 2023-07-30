@@ -23,16 +23,19 @@ rm -f "${HOME}/.zshrc"
 # Remove zsh plugins
 rm -fr "${ZSH_CUSTOM}"
 
-# Remove and configure p10k
+# Remove p10k
 rm -f "${HOME}/.p10k.zsh.bak"
 rm -f "${HOME}/.p10k.zsh"
 
-# Delete k9s catpuccin theme
+# Remove k9s catpuccin theme
 rm -fr "${K9S_CONFIG_PATH}/skins"
 rm -f "${K9S_CONFIG_PATH}/skin.yml"
 
-# Configure neovim
+# Remove neovim config
 rm -fr "${HOME}/.config/nvim"
+
+# Remove karabiner config
+rm -fr  "${HOME}/.config/karabiner/karabiner.json"
 
 # Clean up iTerm
 rm -fr "${ITERM_CONFIG_DIR}"
