@@ -179,5 +179,10 @@ local plugins = {
       vim.cmd [[silent! GoInstallDeps]]
     end,
   },
+  {
+    "ntpeters/vim-better-whitespace",
+    opts = {},
+    lazy = false,
+  },
 }
 return plugins
