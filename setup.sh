@@ -75,7 +75,7 @@ alias vimdiff="${BREW_PREFIX}/bin/nvim -d"
 alias k="${BREW_PREFIX}/bin/kubectl"
 EOT
 
-# Change shell to zsh 
+# Change shell to zsh
 /usr/bin/chsh -s /bin/zsh
 
 exit 0

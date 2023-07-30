@@ -86,12 +86,14 @@ local plugins = {
         "dockerfile-language-server",
         "golangci-lint",
         "gospel",
+        "luaformatter",
         "lua-language-server",
         "mypy",
         "pyright",
         "ruff",
         "rust-analyzer",
         "shellcheck",
+        "shfmt",
         "yaml-language-server",
       },
     },
@@ -181,7 +183,6 @@ local plugins = {
   },
   {
     "ntpeters/vim-better-whitespace",
-    opts = {},
     lazy = false,
   },
 }
