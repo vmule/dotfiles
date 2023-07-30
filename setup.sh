@@ -18,7 +18,7 @@ ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
 $BREW update
 
 # Install what I need
-$BREW bundle --file homebrew/brewfile
+$BREW bundle --file ./brewfile
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
