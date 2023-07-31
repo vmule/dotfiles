@@ -16,7 +16,7 @@ ZSH="${HOME}/.oh-my-zsh"
 # Uninstall oh-my-zsh
 command env ZSH="$ZSH" sh "$ZSH/tools/uninstall.sh"
 
-# Remove zshrc 
+# Remove zshrc
 rm -f "${HOME}/.zshrc.bak"
 rm -f "${HOME}/.zshrc"
 
