@@ -4,33 +4,32 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 if [[ $(uname -m) == 'arm64' ]]; then
-  BREW="/opt/homebrew/bin/brew"
+	BREW="/opt/homebrew/bin/brew"
 else
-  BREW="/usr/local/bin/brew"
+	BREW="/usr/local/bin/brew"
 fi
 
-BREW_PREFIX=$($BREW --prefix)
+BREW_PREFIX=$("$BREW" --prefix)
 ITERM_CONFIG_DIR="${HOME}/.iterm2"
 K9S_CONFIG_PATH="${HOME}/Library/Application Support/k9s"
 ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
 DOTFILES="${HOME}/workspace/dotfiles"
 
 # Brew
-$BREW update
+"$BREW" update
 
 # Install what I need
-$BREW bundle --file ./brewfile
+"$BREW" bundle --file ./brewfile
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mv "${HOME}/.zshrc" "${HOME}/.zshrc.bak"
 ln -s "${DOTFILES}/zsh/zshrc" "${HOME}/.zshrc"
 
-if [ -z ${ZSH_CUSTOM+x} ]
-then
-  ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
+if [ "${ZSH_CUSTOM+x}" = "" ]; then
+	ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
 else
-  echo "ZSH_CUSTOM is set to '$ZSH_CUSTOM'"
+	echo "ZSH_CUSTOM is set to '$ZSH_CUSTOM'"
 fi
 
 # Install zsh plugins
@@ -50,10 +49,10 @@ git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1
 ln -s "${DOTFILES}/nvim" "${HOME}/.config/nvim/lua/custom"
 
 # Configure iTerm
-mkdir "${ITERM_CONFIG_DIR}"
-cp "${DOTFILES}/iterm/com.googlecode.iterm2.plist" "${ITERM_CONFIG_DIR}"
+mkdir "$ITERM_CONFIG_DIR"
+cp "${DOTFILES}/iterm/com.googlecode.iterm2.plist" "$ITERM_CONFIG_DIR"
 # # Specify the preferences directory
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${ITERM_CONFIG_DIR}"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$ITERM_CONFIG_DIR"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
@@ -61,7 +60,7 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 cp "${HOME}/.config/karabiner/karabiner.json" "${DOTFILES}/karabiner/karabiner.json"
 
 # Add useful stuff to alias.zsh
-cat <<EOT >> "${ZSH_CUSTOM}/alias.zsh"
+cat <<EOT >>"${ZSH_CUSTOM}/alias.zsh"
 
 export PATH=/usr/local/opt/python/libexec/bin:${HOME}/bin:/usr/local/bin:${BREW_PREFIX}/bin:${PATH}
 

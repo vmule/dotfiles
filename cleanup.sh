@@ -3,9 +3,9 @@
 # Clean up script used to undo what setup.sh does, for testing purposes.
 
 if [[ $(uname -m) == 'arm64' ]]; then
-  BREW="/opt/homebrew/bin/brew"
+	BREW="/opt/homebrew/bin/brew"
 else
-  BREW="/usr/local/bin/brew"
+	BREW="/usr/local/bin/brew"
 fi
 
 ITERM_CONFIG_DIR="${HOME}/.iterm2"
@@ -21,7 +21,7 @@ rm -f "${HOME}/.zshrc.bak"
 rm -f "${HOME}/.zshrc"
 
 # Remove zsh plugins
-rm -fr "${ZSH_CUSTOM}"
+rm -fr "$ZSH_CUSTOM"
 
 # Remove p10k
 rm -f "${HOME}/.p10k.zsh.bak"
@@ -35,13 +35,13 @@ rm -f "${K9S_CONFIG_PATH}/skin.yml"
 rm -fr "${HOME}/.config/nvim"
 
 # Remove karabiner config
-rm -fr  "${HOME}/.config/karabiner/karabiner.json"
+rm -fr "${HOME}/.config/karabiner/karabiner.json"
 
 # Clean up iTerm
-rm -fr "${ITERM_CONFIG_DIR}"
+rm -fr "$ITERM_CONFIG_DIR"
 
 # Uninstall Brew formulas and casks
-$BREW uninstall --force --zap $($BREW list)
+"$BREW" uninstall --force --zap "$("$BREW" list)"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
 
 # Restore bash as login shell
