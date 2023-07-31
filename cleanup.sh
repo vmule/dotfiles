@@ -41,7 +41,9 @@ rm -fr "${HOME}/.config/karabiner/karabiner.json"
 rm -fr "$ITERM_CONFIG_DIR"
 
 # Uninstall Brew formulas and casks
-"$BREW" uninstall --force --zap "$("$BREW" list)"
+# shellcheck disable=SC2046
+"$BREW" uninstall --force --zap $($BREW list)
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
 
 # Restore bash as login shell
