@@ -87,6 +87,7 @@ M.general = {
 		["qq"] = { ":q <CR>", "vmule: Quit " },
 		["ww"] = { ":w! <CR>", "vmule: Write" },
 		["tt"] = { "<cmd>TransparentToggle<CR>", "Toggle Transparent" },
+		["wt"] = { "<cmd>StripWhitespace<CR>", "Strip Whitespaces" },
 	},
 	i = {
 		["<C-a>"] = { "<ESC>^i", "vmule: Go to beginning of line" },
