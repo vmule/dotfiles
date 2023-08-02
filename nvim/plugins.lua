@@ -219,7 +219,7 @@ local plugins = {
 		build = "yarn global add markmap-cli",
 		cmd = { "MarkmapOpen", "MarkmapSave", "MarkmapWatch", "MarkmapWatchStop" },
 		opts = {
-			html_output = "/tmp/markmap.html", -- (default) Setting a empty string "" here means: [Current buffer path].html
+			html_output = "~/workspace/jobsearch/markmap.html", -- (default) Setting a empty string "" here means: [Current buffer path].html
 			hide_toolbar = false, -- (default)
 			grace_period = 3600000, -- (default) Stops markmap watch after 60 minutes. Set it to 0 to disable the grace_period.
 		},
@@ -228,12 +228,27 @@ local plugins = {
 		end,
 	},
 	{
-		"tamton-aquib/zone.nvim",
+		"gaborvecsei/usage-tracker.nvim",
 		config = function()
-			require("zone").setup()
+			require("usage-tracker").setup({
+				keep_eventlog_days = 14,
+				cleanup_freq_days = 7,
+				event_wait_period_in_sec = 5,
+				inactivity_threshold_in_min = 5,
+				inactivity_check_freq_in_sec = 5,
+				verbose = 0,
+				telemetry_endpoint = "", -- you'll need to start the restapi for this feature
+			})
 		end,
 		lazy = false,
 	},
+	-- {
+	-- 	"tamton-aquib/zone.nvim",
+	-- 	config = function()
+	-- 		require("zone").setup()
+	-- 	end,
+	-- 	lazy = false,
+	-- },
 	-- {
 	-- 	"tamton-aquib/flirt.nvim",
 	-- 	config = function()
