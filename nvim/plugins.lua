@@ -245,7 +245,10 @@ local plugins = {
 	-- {
 	-- 	"tamton-aquib/zone.nvim",
 	-- 	config = function()
-	-- 		require("zone").setup()
+	-- 		require("zone").setup({
+	-- 			style = "vanish",
+	-- 			tick_time = 3,
+	-- 		})
 	-- 	end,
 	-- 	lazy = false,
 	-- },
