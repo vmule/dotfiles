@@ -95,7 +95,6 @@ local plugins = {
 				"dockerfile-language-server",
 				"gofumpt",
 				"golangci-lint",
-				"gospel",
 				"golines",
 				"goimports-reviser",
 				"lua-language-server",
