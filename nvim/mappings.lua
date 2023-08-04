@@ -89,7 +89,13 @@ M.general = {
 		["tt"] = { "<cmd>TransparentToggle<CR>", "Toggle Transparent" },
 		["wt"] = { "<cmd>StripWhitespace<CR>", "Strip Whitespaces" },
 	},
+
 	i = {
+		["<C-a>"] = { "<ESC>^i", "vmule: Go to beginning of line" },
+		["<C-e>"] = { "<End>", "vmule: Got to end of line" },
+	},
+
+	v = {
 		["<C-a>"] = { "<ESC>^i", "vmule: Go to beginning of line" },
 		["<C-e>"] = { "<End>", "vmule: Got to end of line" },
 	},
