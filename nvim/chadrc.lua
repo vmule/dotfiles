@@ -5,6 +5,10 @@ vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { fg = "#abe9b3", bold = true
 vim.api.nvim_set_hl(0, "St_gitIcons", { fg = "#abe9b3" })
 vim.api.nvim_set_hl(0, "StText", { fg = "white", italic = true })
 
+-- LineNr colors
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#f0efe9" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red", bold = true, italic = true })
+
 local M = {}
 
 M.highlights = require("custom.highlights")

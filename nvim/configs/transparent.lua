@@ -30,6 +30,9 @@ require("transparent").setup({
 	exclude_groups = {
 		"NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
 		"NvimTreeNormal", -- NvimTree
+		"NvimTreeNormalNC",
+		"NvimTreeEndOfBuffer",
+		"NvimTreeWinSeparator",
 		"StatusLine",
 		"StatusLineNC",
 	}, -- table: groups you don't want to clear
