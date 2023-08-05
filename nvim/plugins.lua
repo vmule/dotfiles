@@ -48,6 +48,19 @@ local plugins = {
 		end,
 	},
 	{
+		"mfussenegger/nvim-dap-python",
+		ft = "python",
+		dependencies = {
+			"mfussenegger/nvim-dap",
+			"rcarriga/nvim-dap-ui",
+		},
+		config = function()
+			local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+			require("dap-python").setup(path)
+			require("core.utils").load_mappings("dap_python")
+		end,
+	},
+	{
 		"dreamsofcode-io/nvim-dap-go",
 		ft = "go",
 		dependencies = "mfussenegger/nvim-dap",
@@ -201,7 +214,6 @@ local plugins = {
 		lazy = false,
 	},
 	{
-		-- require'alpha'.setup(require'alpha.themes.startify'.config)
 		"goolord/alpha-nvim",
 		event = "VimEnter",
 		config = function()
@@ -218,6 +230,7 @@ local plugins = {
 		"chrisgrieser/nvim-early-retirement",
 		config = true,
 		event = "VeryLazy",
+		lazy = true,
 	},
 	{
 		"chrisgrieser/nvim-origami",

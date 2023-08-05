@@ -5,46 +5,14 @@ local capabilities = config.capabilities
 local lspconfig = require("lspconfig")
 local util = require("lspconfig/util")
 
-lspconfig.pyright.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	filetypes = { "python" },
-})
+local servers = { "bashls", "clangd", "dockerls", "yamlls" }
 
-lspconfig.bashls.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	filetypes = { "sh" },
-})
-
-lspconfig.dockerls.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-lspconfig.clangd.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-lspconfig.yamlls.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-lspconfig.rust_analyzer.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	filetypes = { "rust" },
-	root_dir = util.root_pattern("Cargo.toml"),
-	settings = {
-		["rust-analyzer"] = {
-			cargo = {
-				allFeatures = true,
-			},
-		},
-	},
-})
+for _, lsp in ipairs(servers) do
+	lspconfig[lsp].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+end
 
 lspconfig.gopls.setup({
 	on_attach = on_attach,
@@ -58,6 +26,26 @@ lspconfig.gopls.setup({
 			usePlaceholders = true,
 			analyses = {
 				unusedparams = true,
+			},
+		},
+	},
+})
+
+lspconfig.pyright.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "python" },
+})
+
+lspconfig.rust_analyzer.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "rust" },
+	root_dir = util.root_pattern("Cargo.toml"),
+	settings = {
+		["rust-analyzer"] = {
+			cargo = {
+				allFeatures = true,
 			},
 		},
 	},
