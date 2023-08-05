@@ -24,21 +24,27 @@ local plugins = {
 	},
 	{
 		"mfussenegger/nvim-dap",
+		dependencies = {
+			{
+				"rcarriga/nvim-dap-ui",
+				config = function()
+					local dap = require("dap")
+					local dapui = require("dapui")
+					dapui.setup()
+					dap.listeners.after.event_initialized["dapui_config"] = function()
+						dapui.open()
+					end
+					dap.listeners.before.event_terminated["dapui_config"] = function()
+						dapui.close()
+					end
+					dap.listeners.before.event_exited["dapui_config"] = function()
+						dapui.close()
+					end
+				end,
+			},
+		},
 		config = function()
 			require("core.utils").load_mappings("dap")
-		end,
-	},
-	{
-		"mfussenegger/nvim-dap-python",
-		ft = "python",
-		dependencies = {
-			"mfussenegger/nvim-dap",
-			"rcarriga/nvim-dap-ui",
-		},
-		config = function(_, _)
-			local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-			require("dap-python").setup(path)
-			require("core.utils").load_mappings("dap_python")
 		end,
 	},
 	{
@@ -120,7 +126,6 @@ local plugins = {
 	},
 	{
 		"kdheepak/lazygit.nvim",
-		-- opts = {},
 		event = "VeryLazy",
 		config = function()
 			require("core.utils").load_mappings("lazygit")
@@ -136,7 +141,6 @@ local plugins = {
 			require("custom.configs.noice")
 		end,
 		event = "VeryLazy",
-		opts = {},
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 		},
@@ -147,7 +151,6 @@ local plugins = {
 			require("custom.configs.nvim-tree")
 		end,
 		event = "VeryLazy",
-		opts = {},
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
@@ -173,7 +176,6 @@ local plugins = {
 		config = function()
 			require("custom.configs.transparent")
 		end,
-		opts = {},
 		lazy = false,
 	},
 	{
