@@ -2110,7 +2110,7 @@
 			<key>Columns</key>
 			<integer>300</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/usr/local/bin/zellij</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Boost (Dark)</key>
@@ -2229,7 +2229,7 @@
 			<key>Cursor Type</key>
 			<integer>2</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>

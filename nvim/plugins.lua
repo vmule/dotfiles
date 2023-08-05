@@ -198,6 +198,15 @@ local plugins = {
 		"ntpeters/vim-better-whitespace",
 		lazy = false,
 	},
+	{
+		-- require'alpha'.setup(require'alpha.themes.startify'.config)
+		"goolord/alpha-nvim",
+		event = "VimEnter",
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 	--
 	--
 	-- Experimental plugins that I am trying
