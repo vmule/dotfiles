@@ -10,10 +10,10 @@ else
 fi
 
 BREW_PREFIX=$("$BREW" --prefix)
+DOTFILES="${HOME}/workspace/dotfiles"
 ITERM_CONFIG_DIR="${HOME}/.iterm2"
 K9S_CONFIG_PATH="${HOME}/Library/Application Support/k9s"
 ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
-DOTFILES="${HOME}/workspace/dotfiles"
 
 # Brew
 "$BREW" update
@@ -76,6 +76,7 @@ alias python="${BREW_PREFIX}/bin/python3"
 alias vi="${BREW_PREFIX}/bin/nvim"
 alias vimdiff="${BREW_PREFIX}/bin/nvim -d"
 alias k="${BREW_PREFIX}/bin/kubectl"
+alias ws='cd ${HOME}/workspace'
 EOT
 
 # Change shell to zsh
