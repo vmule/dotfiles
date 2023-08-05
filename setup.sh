@@ -59,6 +59,10 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 # Configure Karabiner
 cp "${HOME}/.config/karabiner/karabiner.json" "${DOTFILES}/karabiner/karabiner.json"
 
+# Configure zellij
+mkdir -p "${HOME}/.config/zellij"
+ln -s "${DOTFILES}/zellij/config.kdl" "${HOME}/.config/zellij/config.kdl"
+
 # Add useful stuff to alias.zsh
 cat <<EOT >>"${ZSH_CUSTOM}/alias.zsh"
 

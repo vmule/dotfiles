@@ -40,6 +40,9 @@ rm -fr "${HOME}/.config/karabiner/karabiner.json"
 # Clean up iTerm
 rm -fr "$ITERM_CONFIG_DIR"
 
+# Clean up zellij
+rm -fr "${HOME}/.config/zellij"
+
 # Uninstall Brew formulas and casks
 # shellcheck disable=SC2046
 "$BREW" uninstall --force --zap $($BREW list)
