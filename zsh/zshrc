@@ -19,12 +19,15 @@ zstyle ':omz:update' frequency 1
 
 # Plugins
 plugins=(
-git
 autoupdate
-sudo
 dirhistory
-history
 kubectl
+git
+history
+ripgrep
+shellfirm
+sudo
+zsh-autosuggestions
 )
 
 # Sauce
