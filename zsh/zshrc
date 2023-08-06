@@ -31,8 +31,12 @@ history
 macos
 minikube
 ripgrep
+rsync
 shellfirm
 sudo
+terraform
 )
 
 source "${ZSH}/oh-my-zsh.sh"
+
+eval $(thefuck --alias)

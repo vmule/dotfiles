@@ -17,14 +17,12 @@ ZSH="${HOME}/.oh-my-zsh"
 command env ZSH="$ZSH" sh "$ZSH/tools/uninstall.sh"
 
 # Remove zshrc
-rm -f "${HOME}/.zshrc.bak"
 rm -f "${HOME}/.zshrc"
 
-# Remove zsh plugins
+# Remove zsh custom folder
 rm -fr "$ZSH_CUSTOM"
 
 # Remove p10k
-rm -f "${HOME}/.p10k.zsh.bak"
 rm -f "${HOME}/.p10k.zsh"
 
 # Remove k9s catpuccin theme
