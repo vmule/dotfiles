@@ -22,15 +22,17 @@ zstyle ':omz:update' frequency 1
 
 # Plugins
 plugins=(
-autoupdate
+brew
 dirhistory
 kubectl
+kubectx
 git
 history
+macos
+minikube
 ripgrep
 shellfirm
 sudo
-zsh-autosuggestions
 )
 
 source "${ZSH}/oh-my-zsh.sh"

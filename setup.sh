@@ -33,8 +33,6 @@ else
 fi
 
 # Install zsh plugins
-git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins "${ZSH_CUSTOM}/plugins/autoupdate" --depth 1
-git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM}/plugins/zsh-autosuggestions" --depth 1
 curl https://raw.githubusercontent.com/kaplanelad/shellfirm/main/shell-plugins/shellfirm.plugin.oh-my-zsh.zsh \
 	--create-dirs -o "${ZSH_CUSTOM}/plugins/shellfirm/shellfirm.plugin.zsh"
 
@@ -72,8 +70,14 @@ cat <<EOT >>"${ZSH_CUSTOM}/alias.zsh"
 export PATH=/usr/local/opt/python/libexec/bin:${HOME}/bin:/usr/local/bin:${BREW_PREFIX}/bin:${PATH}
 
 # Configure zsh-syntax-highlighting.zsh
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="${BREW_PREFIX}/share/zsh-syntax-highlighting/highlighters"
 source "${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# Configure zsh-autosuggestions
+source "${BREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+# Configure zsh-history-substring-search
+source "${BREW_PREFIX}/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
+
 
 alias python="${BREW_PREFIX}/bin/python3"
 alias vi="${BREW_PREFIX}/bin/nvim"
