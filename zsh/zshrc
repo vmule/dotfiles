@@ -23,11 +23,14 @@ zstyle ':omz:update' frequency 1
 # Plugins
 plugins=(
 aliases
+aws
 brew
 dirhistory
+docker
 kubectl
 kubectx
 git
+golang
 history
 macos
 minikube
