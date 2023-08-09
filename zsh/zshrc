@@ -22,6 +22,7 @@ zstyle ':omz:update' frequency 1
 
 # Plugins
 plugins=(
+aliases
 brew
 dirhistory
 kubectl
