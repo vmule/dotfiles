@@ -43,6 +43,7 @@ rsync
 shellfirm
 sudo
 terraform
+zsh-completions
 )
 
 source "${ZSH}/oh-my-zsh.sh"
