@@ -36,6 +36,8 @@ fi
 curl https://raw.githubusercontent.com/kaplanelad/shellfirm/main/shell-plugins/shellfirm.plugin.oh-my-zsh.zsh \
 	--create-dirs -o "${ZSH_CUSTOM}/plugins/shellfirm/shellfirm.plugin.zsh"
 
+git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate
+
 # Install and configure p10k
 git clone https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}/themes/powerlevel10k" --depth 1
 mv "${HOME}/.p10k.zsh" "${HOME}/.p10k.zsh.bak"
