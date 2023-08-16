@@ -88,6 +88,7 @@ alias vimdiff="${BREW_PREFIX}/bin/nvim -d"
 alias k="${BREW_PREFIX}/bin/kubectl"
 alias ls='${BREW_PREFIX}/bin/exa --git --icons'
 alias ws='cd ${HOME}/workspace'
+alias c='clear'
 EOT
 
 # Change shell to zsh
