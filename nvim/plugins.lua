@@ -227,6 +227,15 @@ local plugins = {
 	--
 	--
 	{
+		"FabijanZulj/blame.nvim",
+		config = function()
+			require("blame").setup({
+				blame_type = "virtual",
+			})
+		end,
+		lazy = false,
+	},
+	{
 		"chrisgrieser/nvim-early-retirement",
 		config = true,
 		lazy = false,

@@ -88,6 +88,7 @@ M.general = {
 		["ww"] = { ":w! <CR>", "vmule: Write" },
 		["tt"] = { "<cmd>TransparentToggle<CR>", "Toggle Transparent" },
 		["wt"] = { "<cmd>StripWhitespace<CR>", "Strip Whitespaces" },
+		["gf"] = { "<cmd>ToggleBlame<CR>", "Toggle Blame side window" },
 	},
 
 	i = {
