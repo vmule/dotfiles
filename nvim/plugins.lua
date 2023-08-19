@@ -227,6 +227,18 @@ local plugins = {
 	--
 	--
 	{
+		"ThePrimeagen/git-worktree.nvim",
+		lazy = false,
+	},
+	{
+		"ThePrimeagen/harpoon",
+		lazy = false,
+	},
+	{
+		"ThePrimeagen/vim-apm",
+		lazy = false,
+	},
+	{
 		"FabijanZulj/blame.nvim",
 		config = function()
 			require("blame").setup({
