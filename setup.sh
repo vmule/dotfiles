@@ -75,22 +75,22 @@ cat <<EOT >>"${ZSH_CUSTOM}/alias.zsh"
 export PATH=/usr/local/opt/python/libexec/bin:${HOME}/bin:/usr/local/bin:${BREW_PREFIX}/bin:${PATH}
 
 # Source secret aliases
-source "${ZSH_CUSTOM}/secrect_alias.zsh"
+source ${ZSH_CUSTOM}/secrect_alias.zsh
 
 # Configure zsh-syntax-highlighting.zsh
-source "${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source ${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Configure zsh-autosuggestions
-source "${BREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source ${BREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Configure zsh-history-substring-search
-source "${BREW_PREFIX}/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
+source ${BREW_PREFIX}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 
-alias python="${BREW_PREFIX}/bin/python3"
-alias vi="${BREW_PREFIX}/bin/nvim"
-alias vimdiff="${BREW_PREFIX}/bin/nvim -d"
-alias k="${BREW_PREFIX}/bin/kubectl"
+alias python='${BREW_PREFIX}/bin/python3'
+alias vi='${BREW_PREFIX}/bin/nvim'
+alias vimdiff='${BREW_PREFIX}/bin/nvim -d'
+alias k='${BREW_PREFIX}/bin/kubectl'
 alias ls='${BREW_PREFIX}/bin/exa --git --icons'
 alias ws='cd ${HOME}/workspace'
 alias c='clear'
