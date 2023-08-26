@@ -32,6 +32,8 @@ else
 	echo "ZSH_CUSTOM is set to '$ZSH_CUSTOM'"
 fi
 
+touch "${ZSH_CUSTOM}/secrect_alias.zsh"
+
 # Install zsh plugins
 curl https://raw.githubusercontent.com/kaplanelad/shellfirm/main/shell-plugins/shellfirm.plugin.oh-my-zsh.zsh \
 	--create-dirs -o "${ZSH_CUSTOM}/plugins/shellfirm/shellfirm.plugin.zsh"
@@ -71,6 +73,9 @@ ln -s "${DOTFILES}/zellij/config.kdl" "${HOME}/.config/zellij/config.kdl"
 cat <<EOT >>"${ZSH_CUSTOM}/alias.zsh"
 
 export PATH=/usr/local/opt/python/libexec/bin:${HOME}/bin:/usr/local/bin:${BREW_PREFIX}/bin:${PATH}
+
+# Source secret aliases
+source "${ZSH_CUSTOM}/secrect_alias.zsh"
 
 # Configure zsh-syntax-highlighting.zsh
 source "${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
