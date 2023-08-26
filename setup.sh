@@ -33,6 +33,7 @@ else
 fi
 
 touch "${ZSH_CUSTOM}/secrect_alias.zsh"
+mkdir "${HOME}/workspace"
 
 # Install zsh plugins
 curl https://raw.githubusercontent.com/kaplanelad/shellfirm/main/shell-plugins/shellfirm.plugin.oh-my-zsh.zsh \
