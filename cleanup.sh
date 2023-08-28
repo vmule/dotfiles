@@ -16,7 +16,7 @@ ZSH="${HOME}/.oh-my-zsh"
 # Uninstall oh-my-zsh
 command env ZSH="$ZSH" sh "$ZSH/tools/uninstall.sh"
 
-# Remove worskapce dir 
+# Remove worskapce dir
 # rm -fr "${HOME}/workspace"
 
 # Remove zshrc

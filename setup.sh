@@ -87,7 +87,6 @@ source ${BREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Configure zsh-history-substring-search
 source ${BREW_PREFIX}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-
 alias python='${BREW_PREFIX}/bin/python3'
 alias vi='${BREW_PREFIX}/bin/nvim'
 alias vimdiff='${BREW_PREFIX}/bin/nvim -d'
