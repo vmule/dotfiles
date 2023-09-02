@@ -96,6 +96,7 @@ local plugins = {
 				"python",
 				"regex",
 				"rust",
+				"sql",
 				"vim",
 				"yaml",
 			},
@@ -221,11 +222,30 @@ local plugins = {
 		end,
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
+
+	--
+	-- Database plugins
+	--
+
+	{
+		"tpope/vim-dadbod",
+		opt = true,
+		dependencies = {
+			"kristijanhusak/vim-dadbod-ui",
+			"kristijanhusak/vim-dadbod-completion",
+		},
+		-- config = function()
+		-- 	require("vim-dadbod").setup()
+		-- end,
+		lazy = false,
+	},
+
 	--
 	--
 	-- Experimental plugins that I am trying
 	--
 	--
+
 	{
 		"ThePrimeagen/git-worktree.nvim",
 		lazy = false,
