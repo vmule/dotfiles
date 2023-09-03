@@ -91,7 +91,7 @@ alias python='${BREW_PREFIX}/bin/python3'
 alias vi='${BREW_PREFIX}/bin/nvim'
 alias vimdiff='${BREW_PREFIX}/bin/nvim -d'
 alias k='${BREW_PREFIX}/bin/kubectl'
-alias ls='${BREW_PREFIX}/bin/exa --git --icons'
+alias ls='${BREW_PREFIX}/bin/exa --git --icons --sort type'
 alias ws='cd ${HOME}/workspace'
 alias c='clear'
 EOT
