@@ -1,7 +1,12 @@
 #!/bin/bash
 
+git_clone() {
+	git clone "https://github.com/$1" "$2" --depth 1
+}
+
 # Install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sh -c "$(curl -fsSL \
+	https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 if [[ $(uname -m) == 'arm64' ]]; then
 	BREW="/opt/homebrew/bin/brew"
@@ -22,7 +27,9 @@ ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
 "$BREW" bundle --file ./brewfile
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL \
+	https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
 mv "${HOME}/.zshrc" "${HOME}/.zshrc.bak"
 ln -s "${DOTFILES}/zsh/zshrc" "${HOME}/.zshrc"
 
@@ -39,20 +46,20 @@ mkdir "${HOME}/workspace"
 curl https://raw.githubusercontent.com/kaplanelad/shellfirm/main/shell-plugins/shellfirm.plugin.oh-my-zsh.zsh \
 	--create-dirs -o "${ZSH_CUSTOM}/plugins/shellfirm/shellfirm.plugin.zsh"
 
-git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins "${ZSH_CUSTOM}/plugins/autoupdate" --depth 1
-git clone https://github.com/clarketm/zsh-completions "${ZSH_CUSTOM}/plugins/zsh-completions" --depth 1
+git_clone "TamCore/autoupdate-oh-my-zsh-plugins" "${ZSH_CUSTOM}/plugins/autoupdate"
+git_clone "clarketm/zsh-completions" "${ZSH_CUSTOM}/plugins/zsh-completions"
 
 # Install and configure p10k
-git clone https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}/themes/powerlevel10k" --depth 1
+git_clone "romkatv/powerlevel10k.git" "${ZSH_CUSTOM}/themes/powerlevel10k"
 mv "${HOME}/.p10k.zsh" "${HOME}/.p10k.zsh.bak"
 ln -s "${DOTFILES}/p10k/p10k.zsh" "${HOME}/.p10k.zsh"
 
 # Install k9s catpuccin theme
-git clone https://github.com/catppuccin/k9s.git "${K9S_CONFIG_PATH}/skins/catpuccin" --depth 1
+git_clone "catppuccin/k9s.git" "${K9S_CONFIG_PATH}/skins/catpuccin"
 cp "${K9S_CONFIG_PATH}/skins/catpuccin/dist/mocha.yml" "${K9S_CONFIG_PATH}/skin.yml"
 
 # Configure neovim
-git clone https://github.com/NvChad/NvChad.git "${HOME}/.config/nvim" --depth 1
+git_clone "NvChad/NvChad.git" "${HOME}/.config/nvim"
 ln -s "${DOTFILES}/nvim" "${HOME}/.config/nvim/lua/custom"
 
 # Configure iTerm
