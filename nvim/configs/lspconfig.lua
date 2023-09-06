@@ -5,7 +5,7 @@ local capabilities = config.capabilities
 local lspconfig = require("lspconfig")
 local util = require("lspconfig/util")
 
-local servers = { "bashls", "clangd", "dockerls", "yamlls" }
+local servers = { "bashls", "clangd", "dockerls", "pyright", "yamlls" }
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
@@ -29,12 +29,6 @@ lspconfig.gopls.setup({
 			},
 		},
 	},
-})
-
-lspconfig.pyright.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	filetypes = { "python" },
 })
 
 lspconfig.rust_analyzer.setup({
