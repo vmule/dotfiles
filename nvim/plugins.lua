@@ -227,19 +227,19 @@ local plugins = {
 	-- Database plugins
 	--
 
-	{
-		"tpope/vim-dadbod",
-		opt = true,
-		dependencies = {
-			"kristijanhusak/vim-dadbod-ui",
-			"kristijanhusak/vim-dadbod-completion",
-		},
-		-- config = function()
-		-- 	require("vim-dadbod").setup()
-		-- end,
-		lazy = false,
-	},
-
+	-- {
+	-- 	"tpope/vim-dadbod",
+	-- 	opt = true,
+	-- 	dependencies = {
+	-- 		"kristijanhusak/vim-dadbod-ui",
+	-- 		"kristijanhusak/vim-dadbod-completion",
+	-- 	},
+	-- 	-- config = function()
+	-- 	-- 	require("vim-dadbod").setup()
+	-- 	-- end,
+	-- 	lazy = false,
+	-- },
+	--
 	--
 	--
 	-- Experimental plugins that I am trying
