@@ -115,6 +115,8 @@ local plugins = {
 				"debugpy",
 				"fixjson",
 				"jsonlint",
+				"json-lsp",
+				"jsonnet-language-server",
 				"dockerfile-language-server",
 				"gofumpt",
 				"golangci-lint",

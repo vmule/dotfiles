@@ -5,7 +5,15 @@ local capabilities = config.capabilities
 local lspconfig = require("lspconfig")
 local util = require("lspconfig/util")
 
-local servers = { "bashls", "clangd", "dockerls", "pyright", "yamlls" }
+local servers = {
+	"bashls",
+	"clangd",
+	"dockerls",
+	"jsonls",
+	"jsonnet_ls",
+	"pyright",
+	"yamlls",
+}
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
