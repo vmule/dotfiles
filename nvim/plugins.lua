@@ -73,6 +73,7 @@ local plugins = {
 		"jose-elias-alvarez/null-ls.nvim",
 		ft = {
 			"python",
+			"json",
 			"go",
 			"lua",
 			"clang",
@@ -112,6 +113,8 @@ local plugins = {
 				"clang-format",
 				"cpplint",
 				"debugpy",
+				"fixjson",
+				"jsonlint",
 				"dockerfile-language-server",
 				"gofumpt",
 				"golangci-lint",

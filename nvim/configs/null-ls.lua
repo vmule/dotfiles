@@ -16,6 +16,10 @@ local opts = {
 		null_ls.builtins.code_actions.shellcheck,
 		null_ls.builtins.diagnostics.shellcheck,
 
+		-- json formatter
+		null_ls.builtins.diagnostics.jsonlint,
+		null_ls.builtins.formatting.fixjson,
+
 		-- go formatters
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.goimports_reviser,
