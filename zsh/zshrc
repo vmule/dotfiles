@@ -24,26 +24,26 @@ export UPDATE_ZSH_DAYS=13
 export ZSH_CUSTOM_AUTOUPDATE_QUIET=true
 
 # Plugins
-plugins=(
-aliases
-autoupdate
-aws
-brew
-dirhistory
-docker
-kubectl
-kubectx
-git
-golang
-history
-macos
-minikube
-ripgrep
-rsync
-shellfirm
-sudo
-terraform
-zsh-completions
+  plugins=(
+  aliases
+  autoupdate
+  aws
+  brew
+  dirhistory
+  docker
+  kubectl
+  kubectx
+  git
+  golang
+  history
+  macos
+  minikube
+  ripgrep
+  rsync
+  shellfirm
+  sudo
+  terraform
+  zsh-completions
 )
 
 source "${ZSH}/oh-my-zsh.sh"
