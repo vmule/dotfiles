@@ -5,7 +5,7 @@ git_clone() {
 }
 
 # Install homebrew
-sh -c "$(curl -fsSL \
+bash -c "$(curl -fsSL \
 	https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 if [[ $(uname -m) == 'arm64' ]]; then
