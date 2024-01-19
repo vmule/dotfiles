@@ -17,7 +17,7 @@ fi
 BREW_PREFIX=$("$BREW" --prefix)
 DOTFILES="${HOME}/workspace/dotfiles"
 ITERM_CONFIG_DIR="${HOME}/.iterm2"
-K9S_CONFIG_PATH="${HOME}/Library/Application Support/k9s"
+K9S_CONFIG_PATH="${HOME}/Library/Application\ Support/k9s"
 ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
 
 # Brew
@@ -71,7 +71,7 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$ITERM_CONFIG_DI
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 # Configure Karabiner
-cp "${HOME}/.config/karabiner/karabiner.json" "${DOTFILES}/karabiner/karabiner.json"
+cp "${DOTFILES}/karabiner/karabiner.json" "${HOME}/.config/karabiner/karabiner.json"
 
 # Configure zellij
 mkdir -p "${HOME}/.config/zellij"
