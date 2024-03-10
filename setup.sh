@@ -101,6 +101,7 @@ alias k='${BREW_PREFIX}/bin/kubectl'
 alias ls='${BREW_PREFIX}/bin/eza --git --icons --sort type'
 alias ws='cd ${HOME}/workspace'
 alias c='clear'
+alias compile='g++ -Wall -Werror -pedantic -std=c++1y -o a.out'
 EOT
 
 # Change shell to zsh
