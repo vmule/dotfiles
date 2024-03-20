@@ -77,6 +77,7 @@ local plugins = {
 			"go",
 			"lua",
 			"clang",
+			"clangd",
 			"sh",
 		},
 		opts = function()
@@ -88,6 +89,7 @@ local plugins = {
 		opts = {
 			ensure_installed = {
 				"c",
+				"cpp",
 				"bash",
 				"go",
 				"json",

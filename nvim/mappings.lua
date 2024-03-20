@@ -74,31 +74,31 @@ M.nvimtree = {
 
 	n = {
 		-- toggle
-		["<leader>w"] = { "<cmd> NvimTreeToggle <CR>", "vmule: Toggle nvimtree" },
+		["<leader>w"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
 		-- focus
-		["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "vmule: Focus nvimtree" },
+		["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
 	},
 }
 
 M.general = {
 	n = {
-		["<C-a>"] = { "<ESC>^i", "vmule: Go to beginning of line" },
-		["<C-e>"] = { "<End>", "vmule: Got to end of line" },
-		["qq"] = { ":q <CR>", "vmule: Quit " },
-		["ww"] = { ":w! <CR>", "vmule: Write" },
+		["<C-a>"] = { "<ESC>^i", "Go to beginning of line" },
+		["<C-e>"] = { "<End>", "Got to end of line" },
+		["qq"] = { ":q <CR>", "Quit " },
+		["ww"] = { ":w! <CR>", "Write" },
 		["tt"] = { "<cmd>TransparentToggle<CR>", "Toggle Transparent" },
 		["wt"] = { "<cmd>StripWhitespace<CR>", "Strip Whitespaces" },
 		["gf"] = { "<cmd>ToggleBlame virtual<CR>", "Toggle Blame side window" },
 	},
 
 	i = {
-		["<C-a>"] = { "<ESC>^i", "vmule: Go to beginning of line" },
-		["<C-e>"] = { "<End>", "vmule: Got to end of line" },
+		["<C-a>"] = { "<ESC>^i", "Go to beginning of line" },
+		["<C-e>"] = { "<End>", "Got to end of line" },
 	},
 
 	v = {
-		["<C-a>"] = { "<ESC>^i", "vmule: Go to beginning of line" },
-		["<C-e>"] = { "<End>", "vmule: Got to end of line" },
+		["<C-a>"] = { "<ESC>^i", "Go to beginning of line" },
+		["<C-e>"] = { "<End>", "Got to end of line" },
 	},
 }
 
