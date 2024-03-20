@@ -71,12 +71,12 @@ local plugins = {
 	},
 	{
 		"jose-elias-alvarez/null-ls.nvim",
+		event = "VeryLazy",
 		ft = {
 			"python",
 			"json",
 			"go",
 			"lua",
-			"clang",
 			"clangd",
 			"sh",
 		},
