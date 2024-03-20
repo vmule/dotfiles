@@ -7,7 +7,7 @@ local util = require("lspconfig/util")
 
 local servers = {
 	"bashls",
-	"clangd",
+	-- "clangd",
 	"dockerls",
 	"jsonls",
 	"jsonnet_ls",
@@ -21,6 +21,15 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+lspconfig.clangd.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	cmd = {
+		"clangd",
+		"--offset-encoding=utf-16",
+	},
+})
 
 lspconfig.gopls.setup({
 	on_attach = on_attach,
