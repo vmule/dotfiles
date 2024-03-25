@@ -51,6 +51,7 @@ local plugins = {
 		"mfussenegger/nvim-dap-python",
 		ft = "python",
 		dependencies = {
+			"nvim-neotest/nvim-nio",
 			"mfussenegger/nvim-dap",
 			"rcarriga/nvim-dap-ui",
 		},
@@ -313,6 +314,7 @@ local plugins = {
 	-- 		require("markmap").setup(opts)
 	-- 	end,
 	-- },
+	--
 	-- {
 	-- 	"tamton-aquib/zone.nvim",
 	-- 	config = function()
