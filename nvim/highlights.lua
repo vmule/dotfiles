@@ -6,10 +6,10 @@ local M = {}
 
 ---@type Base46HLGroupsList
 M.override = {
-	-- NormalFloat = { fg = "dark_purple", },
-	-- NvimTreeNormal = { fg = "dark_purple", },
-	-- TelescopePromptNormal = { link = "Normal", },
-	-- TelescopeNormal = { link = "Normal", },
+    -- NormalFloat = { fg = "dark_purple", },
+    -- NvimTreeNormal = { fg = "dark_purple", },
+    -- TelescopePromptNormal = { link = "Normal", },
+    -- TelescopeNormal = { link = "Normal", },
 }
 
 ---@type HLTable

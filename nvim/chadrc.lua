@@ -13,24 +13,23 @@ local M = {}
 
 M.highlights = require("custom.highlights")
 M.mappings = require("custom.mappings")
-M.options = require("custom.options")
 M.plugins = "custom.plugins"
 
 M.ui = {
-	theme = "catppuccin",
-	transparency = false,
+    theme = "catppuccin",
+    transparency = false,
 
-	telescope = {
-		style = "bordered",
-		-- borderless / bordered
-	},
+    telescope = {
+        style = "bordered",
+        -- borderless / bordered
+    },
 
-	statusline = {
-		theme = "vscode_colored",
-		-- default/vscode/vscode_colored/minimal
-		-- default/round/block/arrow separators work only for default statusline theme
-		-- round and block will work for minimal theme only
-	},
+    statusline = {
+        theme = "vscode_colored",
+        -- default/vscode/vscode_colored/minimal
+        -- default/round/block/arrow separators work only for default statusline theme
+        -- round and block will work for minimal theme only
+    },
 }
 
 return M
