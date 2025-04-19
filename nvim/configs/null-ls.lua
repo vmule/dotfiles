@@ -7,18 +7,18 @@ local opts = {
         -- python formatter and diag
         null_ls.builtins.formatting.black,
         null_ls.builtins.diagnostics.mypy,
-        null_ls.builtins.formatting.reorder_python_imports,
-        null_ls.builtins.diagnostics.ruff,
+        -- null_ls.builtins.formatting.reorder_python_imports,
+        -- null_ls.builtins.diagnostics.ruff,
 
         -- bash formatter and diag
         null_ls.builtins.formatting.shfmt,
         -- null_ls.builtins.formatting.shellharden,
-        null_ls.builtins.code_actions.shellcheck,
-        null_ls.builtins.diagnostics.shellcheck,
+        -- null_ls.builtins.code_actions.shellcheck,
+        -- null_ls.builtins.diagnostics.shellcheck,
 
         -- json formatter
-        null_ls.builtins.diagnostics.jsonlint,
-        null_ls.builtins.formatting.fixjson,
+        -- null_ls.builtins.diagnostics.jsonlint,
+        -- null_ls.builtins.formatting.fixjson,
 
         -- go formatters
         null_ls.builtins.formatting.gofumpt,
@@ -31,7 +31,7 @@ local opts = {
 
         -- clang formatter
         null_ls.builtins.formatting.clang_format,
-        null_ls.builtins.diagnostics.cpplint,
+        -- null_ls.builtins.diagnostics.cpplint,
     },
 
     on_attach = function(client, bufnr)
