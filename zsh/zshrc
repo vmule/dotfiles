@@ -1,3 +1,5 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -38,9 +40,7 @@ export ZSH_CUSTOM_AUTOUPDATE_QUIET=true
   history
   macos
   minikube
-  ripgrep
   rsync
-  shellfirm
   sudo
   terraform
   zsh-completions
@@ -56,3 +56,6 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
+
+# Added by Antigravity
+export PATH="/Users/vmule/.antigravity/antigravity/bin:$PATH"

@@ -12,17 +12,19 @@ local servers = {
     "jsonls",
     "jsonnet_ls",
     "pyright",
+    "ruff",
     "yamlls",
 }
 
 for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup({
+    vim.lsp.config(lsp, {
         on_attach = on_attach,
         capabilities = capabilities,
     })
+    vim.lsp.enable(lsp)
 end
 
-lspconfig.clangd.setup({
+vim.lsp.config("clangd", {
     on_attach = on_attach,
     capabilities = capabilities,
     cmd = {
@@ -30,8 +32,9 @@ lspconfig.clangd.setup({
         "--offset-encoding=utf-16",
     },
 })
+vim.lsp.enable("clangd")
 
-lspconfig.gopls.setup({
+vim.lsp.config("gopls", {
     on_attach = on_attach,
     capabilities = capabilities,
     cmd = { "gopls" },
@@ -47,8 +50,9 @@ lspconfig.gopls.setup({
         },
     },
 })
+vim.lsp.enable("gopls")
 
-lspconfig.rust_analyzer.setup({
+vim.lsp.config("rust_analyzer", {
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { "rust" },
@@ -61,3 +65,4 @@ lspconfig.rust_analyzer.setup({
         },
     },
 })
+vim.lsp.enable("rust_analyzer")

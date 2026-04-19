@@ -71,7 +71,7 @@ local plugins = {
         end,
     },
     {
-        "jose-elias-alvarez/null-ls.nvim",
+        "nvimtools/none-ls.nvim",
         event = "VeryLazy",
         ft = {
             "python",
@@ -280,12 +280,12 @@ local plugins = {
         config = true,
         lazy = false,
     },
-    {
-        "chrisgrieser/nvim-origami",
-        event = "BufReadPost", -- later or on keypress would prevent saving folds
-        opts = true,     -- needed even when using default config
-        lazy = false,
-    },
+    -- {
+    --     "chrisgrieser/nvim-origami",
+    --     event = "BufReadPost", -- later or on keypress would prevent saving folds
+    --     opts = true,     -- needed even when using default config
+    --     lazy = false,
+    -- },
     {
         "gaborvecsei/usage-tracker.nvim",
         config = function()
