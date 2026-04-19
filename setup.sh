@@ -73,6 +73,10 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 # Configure Karabiner
 cp "${DOTFILES}/karabiner/karabiner.json" "${HOME}/.config/karabiner/karabiner.json"
 
+# Configure Antigravity
+mkdir -p "${HOME}/Library/Application Support/Antigravity/User"
+ln -sf "${DOTFILES}/antigravity/settings.json" "${HOME}/Library/Application Support/Antigravity/User/settings.json"
+
 # Configure zellij
 mkdir -p "${HOME}/.config/zellij"
 ln -s "${DOTFILES}/zellij/config.kdl" "${HOME}/.config/zellij/config.kdl"

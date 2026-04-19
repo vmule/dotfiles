@@ -1,3 +1,21 @@
+-- Silence deprecation warnings in Neovim 0.11/0.12 until plugins update
+local original_deprecate = vim.deprecate
+vim.deprecate = function(name, alternative, version, plugin, backtrace)
+  local silent_patterns = {
+    "supports_method",
+    "lspconfig",
+    "lsp.with",
+    "sign_define",
+    "get_active_clients",
+  }
+  for _, pattern in ipairs(silent_patterns) do
+    if name:find(pattern) or (alternative and alternative:find(pattern)) then
+      return
+    end
+  end
+  return original_deprecate(name, alternative, version, plugin, backtrace)
+end
+
 vim.g.mapleader = " "
 
 vim.opt.guicursor = ""
